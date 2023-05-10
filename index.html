@@ -1,0 +1,60 @@
+
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css">
+  </head>
+  
+  <body onload="getProductRecommendations()">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
+    <h1>INTEGRACION GPT3 - Modelo EMBEDING</h1>
+  
+    <input type="text" id="prompt" placeholder="Describe que tipo de peliculas te gustan" style="width:350px;"> 
+    <input type="button" id="gen" value="Buscar">
+  
+    <br>
+    <div id="status">
+    </div>
+  
+    <br>
+  
+    <div id="text">
+  
+    </div>
+  
+  
+    <h2>
+      Catalogo de Peliculas
+    </h2>
+    <div id="peliculas">
+  
+    </div>
+  
+    <!-- Modal -->
+    <div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modal-title"></h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div id="description">
+            
+            </div><br>
+            <h6>
+            Te recomendamos
+            </h6>
+            <div id="recomended-films">
+            
+            </div>
+            <br>
+          </div>
+  
+        </div>
+      </div>
+    </div>
+    <script src="./embeddings.js"></script> 
+  
+  </body>
